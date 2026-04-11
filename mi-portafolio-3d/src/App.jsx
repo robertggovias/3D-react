@@ -1,27 +1,22 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 
+// 1. Importamos el componente de tu modelo (asegúrate de que el nombre coincida)
+import { Resting_zone_museum } from './Resting_zone_museum' 
+
 function App() {
   return (
-    // El div contenedor debe tener altura para que el Canvas se vea
     <div style={{ height: '100vh', width: '100vw', background: '#111' }}>
-      
       <Canvas>
-        {/* Luces para que se vea 3D */}
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
+        <ambientLight intensity={0.7} />
+        {/* Luz direccional para darle sombras al museo */}
+        <directionalLight position={[10, 10, 5]} intensity={1.5} />
 
-        {/* Un cubo simple */}
-        <mesh>
-          <boxGeometry args={[2, 2, 2]} />
-          <meshStandardMaterial color="hotpink" />
-        </mesh>
+        {/* 2. Aquí llamamos a tu modelo como si fuera una etiqueta HTML */}
+        <Resting_zone_museum />
 
-        {/* Controles para rotar la cámara con el mouse (como en Blender) */}
         <OrbitControls />
-        
       </Canvas>
-      
     </div>
   )
 }
