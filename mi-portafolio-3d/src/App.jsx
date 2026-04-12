@@ -6,7 +6,7 @@ import { Model } from './Resting_zone_museum'
 
 function App() {
   return (
-    <div style={{ height: '100vh', width: '100vw', background: '#991f1f' }}>
+    <div style={{ height: '100vh', width: '100vw', background: '#8590a1' }}>
       <Canvas>
         <ambientLight intensity={0.7} />
         {/* Luz direccional para darle sombras al museo */}
