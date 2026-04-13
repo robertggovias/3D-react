@@ -13,6 +13,8 @@ export function Producto(props) {
             onPointerOut={() => setMirando(false)}
             scale={mirando ? 1.1 : 1}
         >
+            <boxGeometry args={[1, 1.5, 0.5]} />
+            <meshStandardMaterial color={mirando ? 'hotpink' : 'orange'} />            
         </mesh>
     )
 }

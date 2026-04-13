@@ -5,9 +5,9 @@ import { OrbitControls } from '@react-three/drei'
 import { Producto } from './Producto'
 
 const baseDeDatosAnaquel = [
-  {id: 'prod_01', tipo: 'competencia_alta', ubcación: [-2.45, 0, 0]},
-  {id: 'prod_02', tipo: 'competencia_media', ubcación: [0, 0, 0]},
-  {id: 'prod_03', tipo: 'producto_cliente', ubcación: [2.45, 0, 0]},
+  {id: 'prod_01', tipo: 'competencia_alta', ubicación: [-2.45, 0, 0]},
+  {id: 'prod_02', tipo: 'competencia_media', ubicación: [0, 0, 0]},
+  {id: 'prod_03', tipo: 'producto_cliente', ubicación: [2.45, 0, 0]},
 ]
 function App() {
   return (
@@ -22,10 +22,8 @@ function App() {
         {/* 2. Aquí llamamos a tu modelo como si fuera una etiqueta HTML */}
         {baseDeDatosAnaquel.map((item) => (
           <Producto key={item.id} // La clave es importante para que React sepa qué producto es cuál
-          position={item.ubcación} />
-        ))}
-        <Product position={[-2, 0, 0]} />        
-        <Product position={[2, 0, 0]} />
+          position={item.ubicación} />
+        ))}        
 
         <OrbitControls />
       </Canvas>
